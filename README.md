@@ -32,31 +32,3 @@ Authentication: Passport.js
 Templating Engine: EJS with EJS-Mate
 
 Deployment: Render
-
-🔧 Setup Instructions
-bash
-Copy code
-# Clone the repo
-git clone https://github.com/viveksingh200/Wonderlust.git
-cd Wonderlust
-
-# Install dependencies
-npm install
-
-# Create .env file
-touch .env
-# Add the following:
-# DB_URL=your_mongodb_connection_string
-# SECRET=session_secret
-
-# Run the app
-npm start
-📸 Screenshots
-#### 🏠 Home Page
-![Home Page](screenshots/home.png)
-
-#### 📋 Listings
-![Listings](screenshots/listings.png)
-
-📫 Contact
-Made by Vivek Singh
