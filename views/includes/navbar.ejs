@@ -18,40 +18,54 @@
     padding: 0.5rem 3rem 0.5rem 3rem;
     font-size: 1rem;
   }
+  .nav-size {
+    font-size: 1rem !important;
+  }
 </style>
 
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <div class="brand ms-3">
       <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
-      <button 
-        class="navbar-toggler" 
-        type="button"
-        data-bs-toggle="collapse" 
-        data-bs-target="#navbarNavAltMarkup">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link" href="/listings">Explore</a>
-        </div>
+      <a class="nav-link" href="/listings">Explore</a>
+    </div>
+    
+    <!-- Collapsible links -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-        <div class="navbar-nav ms-auto">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2 search-input" type="search" placeholder="Search destinations">
-            <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
-          </form>
-        </div>
+      <form class="d-flex mx-auto my-2 order-1 order-md-0" role="search" style="width: 100%; max-width: 500px;" action="/listings" method="GET">
+          <input 
+          class="form-control me-2 search-input w-100" 
+          type="search" 
+          placeholder="Search destinations" 
+          aria-label="Search"
+          value="<%= typeof search !== 'undefined' ? search : '' %>"
+          />
+          <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+        </form>
 
-        <div class="navbar-nav ms-auto">
-          <a class="nav-link" href="/listings/new">Airbnb your home</a>
-          <% if(!currUser){ %>
-          <a class="nav-link" href="/signup"><b>Sign up</b></a>
-          <a class="nav-link" href="/login"><b>Log in</b></a>
-          <% } %> 
-          <% if(currUser){ %>
-          <a class="nav-link" href="/logout"><b>Log out</b></a>
-          <% } %>
-        </div>
+      <ul class="navbar-nav me-5 mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link nav-size" href="/listings/new">Airbnb your home</a>
+        </li>
+        <% if (!currUser) { %>
+            <li class="nav-item">
+              <a class="nav-link nav-size" href="/signup"><b>Sign up</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-size" href="/login"><b>Log in</b></a>
+            </li>
+        <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link nav-size" href="/logout"><b>Log out</b></a>
+            </li>
+        <% } %>
+      </ul>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
+

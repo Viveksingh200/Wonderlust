@@ -37,6 +37,7 @@ const sampleListings = [
       price: 1000,
       location: "Aspen",
       country: "United States",
+      Category: "Trending"
     },
     {
       title: "Historic Villa in Tuscany",

@@ -26,14 +26,20 @@ const listSchema = new Schema({
     owner:{
         type: Schema.Types.ObjectId,
         ref: "User",
+    },
+    category: {
+        type: String,
+        enum: {
+            values: ["Trending", "Rooms", "Iconic Cities", "Mountains", "Castles", "Amazing Pools", "Camping", "Farms", "Arctic", "Domes", "Boats"]
+            },
     }
 });
 
-listSchema.post("findOneAndDelete", async(listing)=>{
-    if(listing){
-        await Review.deleteMany({_id: {$in: listing.reviews}});
-    }
-});
+// listSchema.post("findOneAndDelete", async(listing)=>{
+//     if(listing){
+//         await Review.deleteMany({_id: {$in: listing.reviews}});
+//     }
+// });
 
 const Listing = mongoose.model("Listing", listSchema);
 module.exports = Listing;

@@ -10,7 +10,7 @@ body{
 
 /* NavBar */
 .navbar{
-    height: 5rem;
+    /* height: 5rem; */
     background-color: white;
 }
 .fa-compass{
@@ -18,7 +18,12 @@ body{
     font-size: 2rem;
 }
 .nav-link{
+    font-size: 1.3rem !important;
     color: #222222 !important;
+}
+.brand{
+    display: flex;
+    align-items: center;
 }
   
 /* footer */
@@ -48,6 +53,7 @@ body{
     margin-right: 1rem;
     font-size: 1.2rem;
 }
+
 
 /* Cards */
 .listing-card{
@@ -99,3 +105,114 @@ body{
     padding-left: 0;
     padding-right: 0;
 }
+
+/* Index styling */
+#filters-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+  }
+  @media (max-width: 1300px){
+    #filters-wrapper{
+      flex-direction: column;
+    }
+    .tax-toggle{
+      position: relative;
+      bottom: 10px;
+    }
+  }
+
+  #filters{
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+    align-items: center;
+    padding-right: 1rem;
+  }
+  #filters::-webkit-scrollbar {
+  display: none;
+ }
+  .filter{
+    margin-right: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    opacity: 0.5;
+    flex: 0 0 auto;
+  }
+  .filter:hover{
+    opacity: 1;
+    cursor: pointer;
+  }
+  .filter.active {
+  opacity: 1 !important;
+  border-bottom: 2px solid black;
+}
+  .filter p{
+    font-size: 0.8rem;
+  }
+  .filter a{
+    text-decoration: none;
+    color: black;
+  }
+
+#scroll-hint {
+   position: absolute;
+  right: -5px;
+  top: 28%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: #555;
+  background-color: white;
+  padding: 0 5px;
+  z-index: 10;
+  opacity: 0.6;
+  cursor: pointer;
+  pointer-events: auto;
+}
+#scroll-hint:hover{
+    opacity: 1;
+}
+@media (min-width: 950px) {
+  #scroll-hint {
+    display: none;
+  }
+}
+
+#scroll-hint-left {
+  position: absolute;
+  left: -5px;
+  top: 28%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: #555;
+  background-color: white;
+  padding: 0 5px;
+  z-index: 10;
+  opacity: 0.6;
+  cursor: pointer;
+  pointer-events: auto;
+  display: none; /* hidden by default */
+}
+
+@media (min-width: 950px) {
+  #scroll-hint-left {
+    display: none;
+  }
+}
+
+
+  .tax-info{
+    display: none;
+  }
+  .tax-toggle{
+    border: 1px solid black;
+    border-radius: 1rem;
+    height: 3.25rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    margin-top: 22px;
+    width: 36vh;
+    font-size: clamp(0.9rem, 1vw, 2rem);
+  }
+
