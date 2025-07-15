@@ -1,6 +1,4 @@
-:
-
-🌍 Wonderlust
+🌍 Wonderlust:
 Wonderlust is a full-featured travel accommodation listing platform built using the MERN stack (MongoDB, Express, Node.js, EJS). Inspired by Airbnb, the platform allows users to browse, search, and explore various travel listings with rich UI and features.
 
 ✨ Features
