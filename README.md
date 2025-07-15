@@ -16,7 +16,7 @@ Wonderlust is a full-featured travel accommodation listing platform built using 
 
 📱 Fully responsive UI for all screen sizes
 
-🌐 Deployed on Render
+🌐 Deployed on Render: https://wonderlust-vs5m.onrender.com
 
 🚀 Tech Stack
 Frontend: HTML, CSS, JavaScript, Bootstrap, EJS
