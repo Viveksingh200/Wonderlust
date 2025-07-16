@@ -194,12 +194,6 @@ body{
   display: none; /* hidden by default */
 }
 
-@media (min-width: 950px) {
-  #scroll-hint-left {
-    display: none;
-  }
-}
-
 
   .tax-info{
     display: none;
@@ -213,6 +207,13 @@ body{
     align-items: center;
     margin-top: 22px;
     width: 36vh;
-    font-size: clamp(0.9rem, 1vw, 2rem);
+    font-size: clamp(0.6rem, 3vw, 1rem);
   }
 
+  @media (max-width: 400px){
+    .tax-toggle{
+      width: 25vh;
+      font-size: 0.6rem;
+      height: 2rem;
+    }
+  }
