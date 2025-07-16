@@ -210,9 +210,9 @@ body{
     font-size: clamp(0.6rem, 3vw, 1rem);
   }
 
-  @media (max-width: 400px){
+  @media (max-width: 450px){
     .tax-toggle{
-      width: 25vh;
+      width: 20vh;
       font-size: 0.6rem;
       height: 2rem;
     }
